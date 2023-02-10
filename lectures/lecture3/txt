@@ -1,0 +1,14 @@
+Intel registers
+
+Ax, BX, CX, DX, ...
+
+32-BIT
+EAX, EBX, ECX, EDX, ...
+
+64-BIT
+RAX, RBX, RCX, RDX, RSI, RDI, ... , R9, R10, R11, R12, R13, R14, R15
+
+float - 32 bit and double - 64 bit
+AVX: 16 128-bit vector registers
+AVX2: 16 256-bit vector registers
+AVX512: 32 512-bits, double precision in 1 operation

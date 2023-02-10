@@ -1,0 +1,52 @@
+1.Computers process in chunks of n-bits
+2.Computers access memory with large latency
+  a.Sequential is much faster
+  b.Burst mode DDR x8
+  c.2 banks of memory
+3. Computers can't go faster with faster clock speed(why?)
+  a.Heat
+4. Instead, what can we do?
+  a. design better instruction
+  b. video encoder
+  c. CRC
+  d. compression
+  e. encryption
+  f. Gouraud Shading
+5. Other ways to speed up compting
+  a. wider word width
+  b. Very Long Instruction Word (VLIW)
+  c. Vectorization
+6. Future
+  a. Optical computing
+    1. Cheap, low power laser/photodetector
+    2. optical transistor
+  b. quantum computers 
+    qbits can try 2^n combinations in one 
+7. review
+  integer math
+  signed/unsigned 2s complement 
+  -1 = 1111111111111111111111111111111
+  uint16_t a = -1; // 1111111111111111
+  // 65535
+
+  floating point math
+  0.5
+  100.5
+  .2 = 1/5 not a nice fraction
+  infinity and NAN
+  double a = (1.0 / 0); = infinity
+  double b = -1.0 / 0.0; = -infinity
+  double c = 5 / a; = 0
+  double d = 3 / b; = -0
+  double e = a + b = NAN
+  double f = 0.0 / 0/0  = NAN
+  sin(infinity) = NAN
+
+  Hardware
+  1.design a circuit to turn on/off
+  2. loop up spec sheet find relevant limitations
+
+  sub %rcx, %rdx
+
+  cmp %rcx, %rdx #compute rdx-rcx
+  

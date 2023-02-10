@@ -1,0 +1,52 @@
+Harris Pyo 
+"I pledge my honor that I have abided by the Stevens Honor System." - Harris Pyo
+Lab Partner: Justin Chen
+
+Part1:
+Model of CPU : Intel Core i5-10300H 
+CPU clock speed: 2.50 GHz
+Type of memory in laptop: SSD and RAM
+Amount of RAM: 16 GB
+RAM clock speed: 2933 MHz
+Amount of cache: L1 cache - 256 KB, L2 cache - 1.0 MB, L3 cache - 8.0 MB
+
+Part2:
+sum of fractions       :        8137    8100    8045
+read in 64-bit numbers :        187     81      81
+read 64-bit every 2    :        127     126     122
+read 64-bit k=4        :        250     251     259
+read 64-bit k=8        :        779     821     817
+read 64-bit k=16       :        1407    1427    1410
+read 64-bit k=32       :        1856    1886    1863
+read 64-bit k=1k       :        2002    1933    1953
+write 64-bit seq       :        271     174     171
+write 64-bit k=2       :        174     174     172
+write 64-bit k=4       :        338     334     338
+write 64-bit k=8       :        853     821     858
+write 64-bit k=16      :        1632    1634    1537
+write 64-bit k=32      :        2138    2173    2194
+write 64-bit k=1024    :        2368    2354    2344
+⌂nx⌂bel+⌂nx⌂bel+:98
+testing testing 123
+encoded using DOV:    xtzxxgk1}ib}e⌂n, ;?
+decoded using DOV:    testing testing 123
+crc64                 : 397     264     263
+crc64 using AVX       : 126     132     131
+
+Part 3:
+How much faster is CRC using intrinsics vs. regular C++?
+    CRC is about two times faster
+
+Why is the CRC using the intrinsics more efficient than the crc code written in straight C++?
+    When CRC uses intrinsic, it is more efficient than the crc code written in straight c++ since it optimizes the assembly,
+    which is more efficient than the straight C++ code.
+
+What is an Intel Intrinsic?
+    Intel Intrinsic has functions that are coded from assembly that let the user have C++ function calls and vairables when using assembly code.
+
+What is the disadvantage of embedding an intrinsic in your code?
+    The disadvantage is that it can cause higher latencies in the code when embedding an intrinsic into your code.
+    Also, embedding an intrinsic into your code in usually only possible with newer computers.
+
+We did not have time to benchmark the dov vs. the dov8 code. But the dov8 is optimized by precomputing the key into 64-bit values. Estimate how much more efficient the dov8 code might be on processing a large (1GB) block of memory.
+    I think that dov8 should be about 8 times faster than dov. The reason for this is that dov8 encrypts 8 bytes at a time while dov does 1 byte at a time.

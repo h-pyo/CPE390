@@ -1,0 +1,12 @@
+integer comes out as rax
+floating point comes out as xmm0
+
+floating point  
+  addsd %xmm1, %xmm0
+  subsd %xmm1, %xmm0
+  mulsd %xmm1, %xmm0
+  divsd %xmm1, %xmm0
+  sqrtsd %xmm1, %xmm0
+  xorpd %xmm1, %xmm0
+  xorpd $(%rcx), %xmm0
+  andpd $(%rcx), %xmm0

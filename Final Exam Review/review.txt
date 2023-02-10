@@ -1,0 +1,18 @@
+Optimization
+uint64_t f1(uint64_t a, uint64_t b) {
+    uint64_t x = 3 + 4;             // uint64_t x = 7 x``
+    return a * 2 + b * 16 + x;      // return (a << 1) + (b << 4) + x
+}
+
+
+uint64_t f2(uint64_t a, uint64_t b) {
+    return a / 2 + b % 4;           // (a >> 1) + (b & 0x3)
+}
+
+uint64_t f3(uint64_t a) {
+    return (a << 3) | (a >> 61);    // return a 
+}
+
+uint64_t f4(uint64_t a) {
+    return a * 9;                   // return (a << 3) + a
+}

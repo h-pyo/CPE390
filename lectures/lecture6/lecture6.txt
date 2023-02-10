@@ -1,0 +1,9 @@
+quiz
+
+uint64_t a = 0x2B | ~0x2B; 0x00000000FFFFFFFF
+
+xorq %rax, %rax // 0
+mov $238, %rsi
+shrq $16, %rsi // 0
+mov $77, %rsi // binary 01001101
+and $31, %rsi // 00001101 (13)
